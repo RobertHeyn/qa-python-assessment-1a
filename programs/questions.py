@@ -35,7 +35,12 @@
 
 
 def one(input1, input2):
-    return ""
+    if len(input1) > len(input2):
+        return input1
+    elif len(input1) < len(input2):
+        return input2
+    else:
+        return (input1 + ' ' + input2)
 
    # <QUESTION 2>
 
@@ -61,7 +66,13 @@ def one(input1, input2):
 
 
 def two(input):
-    return ""
+    newString = input.lower()
+    x = newString.split('bert')
+    if len(x) < 3:
+        return print("")
+    else:
+        middleValue =int((len(x)/2))
+        return (x[middleValue])
 
 
     # <QUESTION 3>
@@ -85,7 +96,14 @@ def two(input):
 
 
 def three(arg1):
-    return ""
+    if arg1 % 3 == 0 and arg1 % 5 == 0:
+        return "fizzbuzz"
+    elif arg1 % 3 == 0 and arg1 % 5 != 0:
+        return "fizz"
+    elif arg1 % 3 != 0 and arg1 % 5 == 0:
+        return "buzz"
+    else:
+        return "null"
 
     # <QUESTION 4>
 
@@ -111,7 +129,10 @@ def three(arg1):
 
 
 def four(arg1):
-    return ""
+    x = arg1.split('')
+
+
+
 
     # <QUESTION 5>
 
@@ -161,7 +182,16 @@ def five(input):
 
 
 def six(input):
-    return ""
+    if 'cie' in input:
+        return False
+    elif 'cei' in input:
+        return True
+    elif 'ei' in input:
+        return False
+    elif 'ie' in input:
+        return True
+    else:
+        return True
 
     # <QUESTION 7>
 
@@ -179,7 +209,13 @@ def six(input):
 
 
 def seven(input):
-    return ""
+    count = 0
+    Newstr = input.lower()
+    for i in Newstr:
+        if(i == 'a' or i== 'e' or i == 'i' or i == 'o' or i == 'u'):
+            count = count + 1
+    return count
+
 
     # <QUESTION 8>
 
@@ -198,7 +234,11 @@ def seven(input):
 
 
 def eight(input):
-    return ""
+    result = 1
+    while input > 0:
+        result = result * input
+        input = input - 1
+    return print(result)
 
     # <QUESTION 9>
 
@@ -220,7 +260,12 @@ def eight(input):
 
 
 def nine(inputString, char):
-    return ""
+    theStr = inputString
+    if char in theStr:
+        position = theStr.index(char)
+        return position + 1
+    else:
+        return -1
 
     # <QUESTION 10>
 
@@ -235,10 +280,12 @@ def nine(inputString, char):
     # ten("AAbb",1,'b') → False
     # ten("Hi-There",10,'e') → False
 
+
+
     # <HINT>
 
     # How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
 
 
 def ten(string, int, char):
-    return ""
+    if int <= len(string):
